@@ -17,7 +17,7 @@
     continue-list = <UNDERSCORE MINUS BSPC>;
 };
 
-#define RSTHD_L 0
+#define DVORAK_L 0
 #define NUM_L   1
 #define SYM_L   2
 #define NAV_L   3
@@ -111,13 +111,13 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-        // RSTHD
-		rsthd_layer {
+        // DVORAK
+		dvorak_layer {
 			bindings = <
-                   &kp Z        &kp C         &kp Y         &kp F              &kp P              &kp X               &kp M            &kp APOS                 &kp U         &kp Q
-                   &lhm LALT R  &lhm LSHFT S  &lhm LCTRL T  &lhm LGUI H        &kp D              &kp L               &rhm LGUI N      &rhm LCTRL A             &rhm LSHFT I  &rhm LALT O
-                   &sk LSHIFT   &kp V         &kp G         &kp K              &kp B              &kp W               &kp J            &kp COMMA                &key_repeat   &sk LSHIFT
-				 /*&            &*/           &kp ESC       &base_lt NAV_L SPC &base_lt SYM_L TAB &base_lt SYM_L BSPC &base_lt NUM_L E &base_lt FUN_L DOT    /* &             &*/
+&kp SINGLE_QUOTE &kp COMMA &kp PERIOD &kp P &kp Y &kp F &kp G &kp C &kp R &kp L
+&kp A &kp LEFT_SHIFT O &kp E &kp U &kp I &kp D &kp H &kp T &kp N &kp S
+&kp SEMICOLON &kp Q &kp J &kp K &kp X &kp B &kp W &kp M &kp V &kp Z
+&kp BACKSPACE &kp F10 &sk &kp ENTER &kp SPC &kp LEFT_CONTROL
 			>;
 		};
 
