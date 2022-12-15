@@ -144,7 +144,7 @@
 // RR2
 &kp PERIOD &kp N4 &kp N5 &kp N6 &kp N0
 // LR1
-&none &kp LEFT_CONTROL(TAB) &mt LEFT_ALT HOME &kp DOWN &mt LEFT_SHIFT END
+&kp LC(TAB) &mt LEFT_ALT HOME &kp DOWN &mt LEFT_SHIFT END &kp PAGE_DOWN
 // RR1
 &kp COLON &mt LEFT_SHIFT N1 &mt LEFT_CONTROL N2 &mt LEFT_ALT N3 &mt RIGHT_GUI MINUS
 // Thumbs
