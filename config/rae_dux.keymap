@@ -17,8 +17,8 @@
     continue-list = <UNDERSCORE MINUS BSPC>;
 };
 
-#define DVORAK_L 0
-#define NUM_L   1
+#define DVORAK 0
+#define NAV_NUM   1
 #define SYM_L   2
 #define NAV_L   3
 #define FUN_L   4
@@ -114,19 +114,41 @@
         // DVORAK
 		dvorak_layer {
 			bindings = <
-&kp SINGLE_QUOTE &kp COMMA &kp PERIOD &kp P &kp Y &kp F &kp G &kp C &kp R &kp L
-&kp A &kp O &kp E &kp U &kp I &kp D &kp H &kp T &kp N &kp S
-&kp SEMICOLON &kp Q &kp J &kp K &kp X &kp B &kp W &kp M &kp V &kp Z
-&kp BACKSPACE &kp F10 &kp LEFT_SHIFT &kp ENTER &kp SPC &kp LEFT_CONTROL
+// LR3
+&kp SINGLE_QUOTE &kp COMMA &kp PERIOD &kp P
+// RR3
+&kp Y &kp F &kp G &kp C &kp R &kp L
+// LR2
+&kp A &kp O &kp E &kp U &kp I
+// RR2
+&kp D &kp H &kp T &kp N &kp S
+// LR1
+&kp SEMICOLON &kp Q &kp J &kp K &kp X
+// RR1
+&kp B &kp M &kp W &kp V &kp Z
+// LT
+&kp BACKSPACE &lt NAV_NUM F10 &sk LEFT_SHIFT
+// RT
+&kp ENTER &kp SPC &sk RIGHT_CONTROL
 			>;
 		};
 
-		num_layer {
+		nav_num {
 			bindings = <
-                   &trans       &kp LT        &kp MINUS     &kp GT             &trans             &trans              &trans           &kp EQUAL                &trans        &trans
-                   &lhm LALT N3 &lhm LSHFT N2 &lhm LCTRL N1 &lhm LGUI N0       &kp N4             &kp N5              &rhm LGUI N6     &rhm LCTRL N7            &rhm LSHFT N8 &rhm LALT N9
-                   &kp FSLH     &kp PLUS      &kp CARET     &kp STAR           &trans             &trans              &trans           &kp COMMA                &kp DOT       &trans
-				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans    /*             &             &*/
+// LR3
+&none &kp BACKSPACE &kp SPACE &kp DELETE &kp PAGE_UP
+// RR3
+&kp COMMA &kp N7 &kp N8 &kp N9 &kp UNDERSCORE 
+// LR2
+&kp TAB &kp LEFT &kp UP &kp RIGHT &kp ENTER
+// RR2
+&kp PERIOD &kp N4 &kp N5 &kp N6 &kp N0
+// LR1
+&none &kp LEFT_CONTROL(TAB) &mt LEFT_ALT HOME &kp DOWN &mt LEFT_SHIFT END
+// RR1
+&kp COLON &mt LEFT_SHIFT N1 &mt LEFT_CONTROL N2 &mt LEFT_ALT N3 &mt RIGHT_GUI MINUS
+// Thumbs
+&trans &trans &trans &trans &trans &trans
 			>;
 		};
 
