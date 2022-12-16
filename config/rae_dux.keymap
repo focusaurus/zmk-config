@@ -18,10 +18,10 @@
 };
 
 #define DVORAK 0
-#define NAV_NUM   1
-#define SYM_L   2
-#define NAV_L   3
-#define FUN_L   4
+#define NAV_NUM 1
+#define BANG 2
+#define NAV_L 3
+#define FUN_L 4
 
 #define MY_PSCRN LS(LC(PSCRN))
 #define MY_COPY LC(INSERT)
@@ -129,7 +129,7 @@
 // LT
 &kp BACKSPACE &lt NAV_NUM F10 &sk LEFT_SHIFT
 // RT
-&kp ENTER &kp SPC &sk RIGHT_CONTROL
+&kp ENTER &lt BANG SPC &sk RIGHT_CONTROL
 			>;
 		};
 
@@ -152,12 +152,22 @@
 			>;
 		};
 
-		sym_layer {
+		bang {
 			bindings = <
-                   &trans       &kp EXCL      &kp AT        &kp DLLR           &trans             &trans              &kp TILDE        &kp EQUAL                &kp BSLH      &trans
-                   &kp HASH     &kp LT        &kp MINUS     &kp GT             &kp GRAVE          &kp AMPS            &kp LBRC         &kp LPAR                 &kp RPAR      &kp PIPE
-                   &kp FSLH     &kp PLUS      &kp CARET     &kp STAR           &kp UNDER          &kp PRCNT           &kp RBRC         &kp LBKT                 &kp RBKT      &trans
-				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans    /*             &             &*/
+// LR3
+&kp UNDERSCORE &kp MINUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp GREATER_THAN
+// RR3
+&kp PLUS &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp PIPE 
+// LR2
+&kp SINGLE_QUOTE &kp DOUBLE_QUOTES &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp ENTER
+// RR2
+&kp EQUAL &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp SLASH
+// LR1
+&kp SEMICOLON &mt LEFT_ALT GRAVE &kp LEFT_BRACKET &mt LEFT_CONTROL RIGHT_BRACKET &kp LESS_THAN
+// RR1
+&kp BACKSLASH &mt LEFT_SHIFT LS(N1) &mt LEFT_CONTROL LS(N2) &mt LEFT_ALT LS(N3) &mt RIGHT_GUI QUESTION
+// Thumbs
+&trans &trans &trans &trans &trans &trans
 			>;
 		};
 
