@@ -18,7 +18,7 @@
 };
 
 #define DVORAK 0
-#define NAV_NUM 1
+#define NAVNUM 1
 #define BANG 2
 #define KBFN 3
 
@@ -127,13 +127,13 @@
 // RR1
 &kp B &mt RIGHT_SHIFT M &mt RIGHT_CONTROL W &mt LEFT_ALT V &mt RIGHT_GUI Z
 // LT
-&lt KBFN BACKSPACE &lt NAV_NUM F10 &sk LEFT_SHIFT
+&lt NAVNUM BACKSPACE &sl BANG &sk LEFT_SHIFT
 // RT
-&kp ENTER &lt BANG SPC &sk RIGHT_CONTROL
+&kp ENTER &lt NAVNUM SPC &sk RIGHT_CONTROL
 			>;
 		};
 
-		nav_num {
+		navnum {
 			bindings = <
 // LR3
 &none &kp BACKSPACE &kp SPACE &kp DELETE &kp PAGE_UP
