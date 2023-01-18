@@ -19,7 +19,7 @@
 
 #define DVORAK 0
 #define NAVNUM 1
-#define BANG 2
+#define SYM 2
 #define KBFN 3
 
 #define MY_PSCRN LS(LC(PSCRN))
@@ -127,7 +127,7 @@
 // RR1
 &kp B &mt RIGHT_SHIFT M &mt RIGHT_CONTROL W &mt LEFT_ALT V &mt RIGHT_GUI Z
 // LT
-&lt NAVNUM BACKSPACE &sl BANG &sk LEFT_SHIFT
+&lt NAVNUM BACKSPACE &sl SYM &sk LEFT_SHIFT
 // RT
 &kp ENTER &lt NAVNUM SPC &sk RIGHT_CONTROL
 			>;
